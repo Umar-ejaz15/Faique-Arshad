@@ -55,22 +55,22 @@ const Services = () => {
   return (
     <div className="mx-auto px-4 py-16 bg-black flex justify-center">
       <div className="container">
-        <h2 className="text-4xl font-bold text-center mb-12 text-purple-500">Stuff I'm Really Good At</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
+        <h2 className="text-4xl md:text-3xl sm:text-2xl font-bold text-center mb-12 text-purple-500">Stuff I'm Really Good At</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 place-items-center">
           {services.map((service, index) => (
-            <div className="relative group w-80 h-80 bg-purple-100 rounded-full shadow-lg overflow-hidden cursor-pointer transform transition-transform duration-500 hover:scale-105" key={index}>
+            <div className="relative group w-full max-w-[320px] h-[320px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] bg-purple-100 rounded-full shadow-lg overflow-hidden cursor-pointer transform transition-transform duration-500 hover:scale-105" key={index}>
               <div className="absolute inset-0">
-                <div className="absolute inset-0 flex flex-col items-center justify-center  transform transition-transform duration-500 group-hover:-translate-x-full">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-center text-black">{service.title}</h3>
+                <div className="absolute inset-0 flex flex-col items-center justify-center transform transition-transform duration-500 group-hover:-translate-x-full">
+                  <div className="text-3xl sm:text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-center text-black px-4">{service.title}</h3>
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 bg-purple-800 text-white transform transition-transform duration-500 translate-x-full group-hover:translate-x-0">
-                  <p className="text-sm text-center mb-4">{service.description}</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 bg-purple-800 text-white transform transition-transform duration-500 translate-x-full group-hover:translate-x-0">
+                  <p className="text-xs sm:text-sm text-center mb-2 sm:mb-4">{service.description}</p>
                   <div className="w-full">
-                    <h4 className="font-semibold mb-2">Tools:</h4>
-                    <ul className="flex flex-wrap justify-center gap-2">
+                    <h4 className="font-semibold text-sm mb-2">Tools:</h4>
+                    <ul className="flex flex-wrap justify-center gap-1 sm:gap-2">
                       {service.tools.map((tool, idx) => (
-                        <li key={idx} className="text-xs bg-purple-950 px-2 py-1 rounded-xl">{tool}</li>
+                        <li key={idx} className="text-[10px] sm:text-xs bg-purple-950 px-2 py-1 rounded-xl">{tool}</li>
                       ))}
                     </ul>
                   </div>

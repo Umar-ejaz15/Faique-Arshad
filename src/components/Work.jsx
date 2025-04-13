@@ -40,27 +40,27 @@ const data = [
 
 const Work = () => {
   return (
-    <div className="min-h-screen m-auto  p-4 py-16 bg-black text-white">
-      <h1 className="text-5xl font-bold text-center text-purple-400 mb-12 tracking-tight">
+    <div className="min-h-screen m-auto p-4 py-16 bg-black text-white">
+      <h1 className="text-4xl md:text-5xl font-bold text-center text-purple-500 mb-8 md:mb-12 tracking-tight">
         Work Experience
       </h1>
-      <div className="mx-auto container">
-        <div className="grid gap-6">
+      <div className="mx-auto container px-4 md:px-6">
+        <div className="grid gap-4 md:gap-6">
           {data.map((item, idx) => (
             <div
               key={idx}
-              className="backdrop-blur-sm  rounded-xl p-8 border border-purple-500/20 
+              className="backdrop-blur-sm rounded-xl p-4 md:p-8 border border-purple-500/20 
                         shadow-[0_0_15px_rgba(139,92,246,0.1)] hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] 
-                        transition-all duration-300 hover:scale-[1.02] hover:bg-purple-900/40"
+                        transition-all duration-300 hover:scale-[1.02] hover:bg-purple-800/90"
             >
-              <h3 className="text-3xl font-bold bg-white bg-clip-text text-transparent">
+              <h3 className="text-xl md:text-3xl font-bold bg-white bg-clip-text text-transparent">
                 {item.title}
               </h3>
-              <ul className="space-y-3 mt-4">
+              <ul className="space-y-2 md:space-y-3 mt-3 md:mt-4">
                 {item.points.map((point, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-2 text-lg text-gray-300"
+                    className="flex items-start gap-2 text-base md:text-lg text-gray-300"
                   >
                     <span className="text-purple-400 mt-1">▹</span>
                     {point}
@@ -70,10 +70,10 @@ const Work = () => {
             </div>
           ))}
         </div>
-        <button className="bg-purple-500 mt-10 mx-auto text-center flex justify-center hover:bg-transparent text-black hover:text-white px-6 py-2 rounded-md transition-all duration-300 border-2 border-purple-500">
+        <button className="bg-purple-500 mt-8 md:mt-10 mx-auto text-center flex justify-center hover:bg-transparent text-black hover:text-white px-4 md:px-6 py-2 rounded-md transition-all duration-300 border-2 border-purple-500">
           <a
             href="#hire"
-            className="font-medium inline-block transform hover:translate-x-1 transition-transform duration-300"
+            className="font-medium inline-block transform hover:translate-x-1 transition-transform duration-300 text-sm md:text-base"
           >
             Download CV
             <span className="inline-block transform hover:translate-x-1 transition-transform duration-300">
